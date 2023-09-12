@@ -11,19 +11,19 @@
         </router-link>
       </li>
       <li class="sidebar-item">
-        <router-link :to="{ name: 'Categories' }" class="sidebar-link">
+        <router-link :to="{ name: '' }" class="sidebar-link">
           <i class="fas fa-th"></i>
           <span class="menu-text">Toyota</span>
         </router-link>
       </li>
       <li class="sidebar-item">
-        <router-link :to="{ name: 'About' }" class="sidebar-link">
+        <router-link :to="{ name: '' }" class="sidebar-link">
           <i class="fas fa-info-circle"></i>
           <span class="menu-text">Mercedes</span>
         </router-link>
       </li>
       <li class="sidebar-item">
-        <router-link :to="{ name: 'Contact' }" class="sidebar-link">
+        <router-link :to="{ name: '' }" class="sidebar-link">
           <i class="fas fa-envelope"></i>
           <span class="menu-text">Lambo</span>
         </router-link>

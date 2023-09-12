@@ -1,18 +1,32 @@
 <template>
-    <div class="justify-content-evenly row">
-        <div class="col-lg-4 col-md-6 col-12 each-car mx-auto" v-for="(eachCar, i) in carsInfo" :key="i">
-            <img :src="getImageUrl(eachCar.name, eachCar.mainImage)" alt="" class="rounded d-block mx-auto">
-            <h4 class="text-center">{{ eachCar.name }} | {{ eachCar.model }}</h4>
-            <div>
-                <div class="float-start"><button type="button" class="btn btn-light"> {{ eachCar.price }}</button></div>
-                <div class="float-end ml-2">
-                    <RouterLink :to="{ name: 'About' }">
-                        <button type="button" class="btn btn-primary">More Details</button>
-                    </RouterLink>
-                </div>
-            </div>
-        </div>
+  <div class="car-list">
+    <div
+      class="car-card"
+      v-for="(eachCar, i) in carsInfo"
+      :key="i"
+    >
+      <div class="car-image">
+        <img
+          :src="getImageUrl(eachCar.name, eachCar.mainImage)"
+          alt=""
+          class="car-img"
+        />
+      </div>
+      <div class="car-details">
+        <h4 class="car-title">{{ eachCar.name }} | {{ eachCar.model }}</h4>
+        <p class="car-price">{{ eachCar.price }}</p>
+        <RouterLink
+          :to="{
+            name: 'carInfo',
+            params: { carName: eachCar.name, carField: eachCar.fileNumber }
+          }"
+          class="car-link"
+        >
+          More Details
+        </RouterLink>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -33,14 +47,76 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.each-car{
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 10px solid #eee;
-    img{
-        width: 250px;
-        height: 200px;
-        margin-bottom: 10px;
-    }
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.car-card {
+  width: calc(33.33% - 20px); /* Mengatur agar ada 3 kartu per baris */
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.car-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.car-image {
+  text-align: center;
+}
+
+.car-img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+}
+
+.car-details {
+  text-align: center;
+}
+
+.car-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.car-price {
+  font-size: 1rem;
+}
+
+.car-link {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.car-link:hover {
+  background-color: #0056b3;
+}
+
+/* Media queries untuk layar berukuran lebih kecil */
+@media (max-width: 768px) {
+  .car-card {
+    width: calc(50% - 20px); /* Mengatur agar ada 2 kartu per baris */
+  }
+}
+
+/* Media queries untuk layar berukuran lebih kecil lagi */
+@media (max-width: 576px) {
+  .car-card {
+    width: 100%; /* Mengatur agar 1 kartu per baris */
+  }
 }
 </style>

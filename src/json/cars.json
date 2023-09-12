@@ -6,7 +6,7 @@
         "model": " ",
         "price": "Rp.3.2 M",
         "mainImage": "civic1.jpg",
-        "images": ["civic1.JPG"],
+        "images": ["civic1.jpg","civic2.jpg", "civic3.jpg"],
         "description": "Mobil sedan kompak dengan desain modern.",
         "uploadedOn": "18/08/2020",
         "year": 2020
@@ -18,7 +18,7 @@
         "model": "CR-V",
         "price": "Rp.4.5 M",
         "mainImage": "civic2.jpg",
-        "images": ["civic2.jpg"],
+        "images": ["civic1.jpg","civic2.jpg", "civic3.jpg"],
         "description": "SUV kompak dengan kabin yang luas dan nyaman.",
         "uploadedOn": "25/04/2019",
         "year": 2019
@@ -30,7 +30,7 @@
     "model": "Jazz",
     "price": "Rp.2.8 M",
     "mainImage": "civic3.jpg",
-    "images": [ "civic3.jpg"],
+    "images": ["civic1.jpg","civic2.jpg", "civic3.jpg"],
     "description": "Mobil hatchback yang irit bahan bakar dan lincah.",
     "uploadedOn": "03/12/2021",
     "year": 2021
@@ -78,7 +78,7 @@
         "model": "488 GTB",
         "price": "Rp.4.8 M",
         "mainImage": "ferr1.jpg",
-        "images": ["488gtb1.jpg", "488gtb2.jpg", "488gtb3.jpg"],
+        "images": ["ferr1.jpg", "ferr2.jpg", "ferr3.jpg"],
         "description": "Super car dengan desain yang mengagumkan dan performa yang luar biasa.",
         "uploadedOn": "06/06/2021",
         "year": 2021
@@ -90,7 +90,7 @@
         "model": "F8 Tributo",
         "price": "Rp.5.2 M",
         "mainImage": "ferr2.jpg",
-        "images": ["f8tributo1.jpg", "f8tributo2.jpg", "f8tributo3.jpg"],
+        "images": ["ferr1.jpg", "ferr2.jpg", "ferr3.jpg"],
         "description": "Super car dengan desain aerodinamis dan mesin yang kuat.",
         "uploadedOn": "09/08/2020",
         "year": 2020
@@ -102,10 +102,118 @@
         "model": "Portofino",
         "price": "Rp.3.5 M",
         "mainImage": "ferr3.jpg",
-        "images": ["portofino1.jpg", "portofino2.jpg", "portofino3.jpg"],
+        "images": ["ferr1.jpg", "ferr2.jpg", "ferr3.jpg"],
         "description": "Grand tourer dengan gaya Italia yang elegan dan performa yang luar biasa.",
         "uploadedOn": "12/12/2019",
         "year": 2019
+    },
+    {
+        "id": 9,
+        "fileNumber": 1234,
+        "name": "Mercedes",
+        "model": "S-Class",
+        "price": "Rp.7.0 M",
+        "mainImage": "merces-1.jpg",
+        "images": ["merces-1.jpg", "merces-2.jpg", "merces-3.jpg"],
+        "description": "Sedan mewah dengan teknologi canggih dan kenyamanan tingkat atas.",
+        "uploadedOn": "03/05/2022",
+        "year": 2022
+    },
+    {
+        "id": 10,
+        "fileNumber": 5678,
+        "name": "Mercedes",
+        "model": "GLE",
+        "price": "Rp.5.5 M",
+        "mainImage": "merces-2.jpg",
+        "images": ["merces-1.jpg", "merces-2.jpg", "merces-3.jpg"],
+        "description": "SUV mewah dengan performa tangguh dan interior yang mewah.",
+        "uploadedOn": "20/09/2021",
+        "year": 2021
+    },
+    {
+        "id": 11,
+        "fileNumber": 9012,
+        "name": "Mercedes",
+        "model": "AMG",
+        "price": "Rp.6.8 M",
+        "mainImage": "merces-3.jpg",
+        "images": ["merces-1.jpg", "merces-2.jpg", "merces-3.jpg"],
+        "description": "Sports car dengan desain yang menggoda dan mesin yang sangat kuat.",
+        "uploadedOn": "15/12/2020",
+        "year": 2020
+    },
+    {
+        "id": 12,
+        "fileNumber": 12345,
+        "name": "Chevrolet",
+        "model": "Camaro",
+        "price": "Rp.5.0 M",
+        "mainImage": "cev1.jpg",
+        "images": ["cev1.jpg", "cev2.jpg", "cev3.jpg"],
+        "description": "Muscle car dengan gaya yang klasik dan performa yang mengesankan.",
+        "uploadedOn": "02/04/2022",
+        "year": 2022
+    },
+    {
+        "id": 13,
+        "fileNumber": 67890,
+        "name": "Chevrolet",
+        "model": "Equinox",
+        "price": "Rp.4.2 M",
+        "mainImage": "cev2.jpg",
+        "images": ["cev1.jpg", "cev2.jpg", "cev3.jpg"],
+        "description": "SUV kompak dengan desain modern dan efisiensi bahan bakar yang baik.",
+        "uploadedOn": "11/07/2021",
+        "year": 2021
+    },
+    {
+        "id": 14,
+        "fileNumber": 23456,
+        "name": "Chevrolet",
+        "model": "Silverado",
+        "price": "Rp.6.5 M",
+        "mainImage": "cev3.jpg",
+        "images": ["cev1.jpg", "cev2.jpg", "cev3.jpg"],
+        "description": "Truk pick-up yang tangguh dengan kemampuan off-road yang kuat.",
+        "uploadedOn": "05/03/2020",
+        "year": 2020
+    },
+    {
+        "id": 15,
+        "fileNumber": 123456,
+        "name": "Toyota",
+        "model": "Land Cruiser",
+        "price": "Rp.6.8 M",
+        "mainImage": "toyo-1.jpg",
+        "images": ["toyo-1.jpg", "toyo-2.jpg", "toyo-3.jpg"],
+        "description": "SUV legendaris dengan kemampuan off-road yang luar biasa.",
+        "uploadedOn": "15/04/2022",
+        "year": 2022
+    },
+    {
+        "id": 16,
+        "fileNumber": 678901,
+        "name": "Toyota",
+        "model": "Prius",
+        "price": "Rp.2.5 M",
+        "mainImage": "toyo-2.jpg",
+        "images": ["toyo-1.jpg", "toyo-2.jpg", "toyo-3.jpg"],
+        "description": "Mobil hybrid yang ramah lingkungan dengan efisiensi bahan bakar tinggi.",
+        "uploadedOn": "20/09/2021",
+        "year": 2021
+    },
+    {
+        "id": 17,
+        "fileNumber": 234567,
+        "name": "Toyota",
+        "model": "4Runner",
+        "price": "Rp.5.2 M",
+        "mainImage": "toyo-3.jpg",
+        "images": ["toyo-1.jpg", "toyo-2.jpg", "toyo-3.jpg"],
+        "description": "SUV tangguh untuk petualangan di alam terbuka.",
+        "uploadedOn": "05/03/2022",
+        "year": 2022
     }
     
 ]
