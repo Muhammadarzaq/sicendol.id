@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="contact">
     <img alt="Vue logo" src="../assets/logo.png">
 
   </div>
@@ -8,8 +8,6 @@
 <script>
 
 export default {
-  name: 'AboutView',
-  components: {
-  }
+  name: 'ContactView'
 }
 </script>

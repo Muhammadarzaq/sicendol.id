@@ -8,8 +8,9 @@
 <script>
 
 export default {
-  name: 'AboutView',
+  name: 'CategoriesView',
   components: {
+
   }
 }
 </script>

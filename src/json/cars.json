@@ -1,0 +1,111 @@
+[
+    {
+        "id": 0,
+        "fileNumber": 234,
+        "name": "Honda",
+        "model": " ",
+        "price": "Rp.3.2 M",
+        "mainImage": "civic1.jpg",
+        "images": ["civic1.JPG"],
+        "description": "Mobil sedan kompak dengan desain modern.",
+        "uploadedOn": "18/08/2020",
+        "year": 2020
+    },
+    {
+        "id": 1,
+        "fileNumber": 567,
+        "name": "Honda",
+        "model": "CR-V",
+        "price": "Rp.4.5 M",
+        "mainImage": "civic2.jpg",
+        "images": ["civic2.jpg"],
+        "description": "SUV kompak dengan kabin yang luas dan nyaman.",
+        "uploadedOn": "25/04/2019",
+        "year": 2019
+    },
+    {
+    "id": 2,
+    "fileNumber": 890,
+    "name": "Honda",
+    "model": "Jazz",
+    "price": "Rp.2.8 M",
+    "mainImage": "civic3.jpg",
+    "images": [ "civic3.jpg"],
+    "description": "Mobil hatchback yang irit bahan bakar dan lincah.",
+    "uploadedOn": "03/12/2021",
+    "year": 2021
+    },
+    {
+        "id": 3,
+        "fileNumber": 123,
+        "name": "Lamborghini",
+        "model": "Aventador",
+        "price": "Rp.7.5 M",
+        "mainImage": "lambo1.jpg",
+        "images": ["lambo1.jpg", "lambo2.png", "lambo3.jpg"],
+        "description": "Super car yang sangat cepat dengan desain futuristik.",
+        "uploadedOn": "10/05/2022",
+        "year": 2022
+    },
+    {
+        "id": 4,
+        "fileNumber": 456,
+        "name": "Lamborghini",
+        "model": "Huracan",
+        "price": "Rp.6.2 M",
+        "mainImage": "lambo2.png",
+        "images": ["lambo1.jpg", "lambo2.png", "lambo3.jpg"],
+        "description": "Mobil sport yang menggabungkan keindahan dan kecepatan.",
+        "uploadedOn": "15/09/2021",
+        "year": 2021
+    },
+    {
+        "id": 5,
+        "fileNumber": 789,
+        "name": "Lamborghini",
+        "model": "Urus",
+        "price": "Rp.4.9 M",
+        "mainImage": "lambo3.jpg",
+        "images": ["lambo1.jpg", "lambo2.png", "lambo3.jpg"],
+        "description": "SUV super mewah dengan kinerja yang mengesankan.",
+        "uploadedOn": "02/03/2020",
+        "year": 2020
+    },
+    {
+        "id": 6,
+        "fileNumber": 345,
+        "name": "Ferrari",
+        "model": "488 GTB",
+        "price": "Rp.4.8 M",
+        "mainImage": "ferr1.jpg",
+        "images": ["488gtb1.jpg", "488gtb2.jpg", "488gtb3.jpg"],
+        "description": "Super car dengan desain yang mengagumkan dan performa yang luar biasa.",
+        "uploadedOn": "06/06/2021",
+        "year": 2021
+    },
+    {
+        "id": 7,
+        "fileNumber": 678,
+        "name": "Ferrari",
+        "model": "F8 Tributo",
+        "price": "Rp.5.2 M",
+        "mainImage": "ferr2.jpg",
+        "images": ["f8tributo1.jpg", "f8tributo2.jpg", "f8tributo3.jpg"],
+        "description": "Super car dengan desain aerodinamis dan mesin yang kuat.",
+        "uploadedOn": "09/08/2020",
+        "year": 2020
+    },
+    {
+        "id": 8,
+        "fileNumber": 901,
+        "name": "Ferrari",
+        "model": "Portofino",
+        "price": "Rp.3.5 M",
+        "mainImage": "ferr3.jpg",
+        "images": ["portofino1.jpg", "portofino2.jpg", "portofino3.jpg"],
+        "description": "Grand tourer dengan gaya Italia yang elegan dan performa yang luar biasa.",
+        "uploadedOn": "12/12/2019",
+        "year": 2019
+    }
+    
+]

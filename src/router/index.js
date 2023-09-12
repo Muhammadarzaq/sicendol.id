@@ -1,22 +1,35 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import AboutView from '../views/AboutView.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: HomeView
   },
   {
     path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    name: 'About',
+    component: AboutView
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('../views/ContactView.vue')
+  },
+  {
+    path: '/categories',
+    name: 'Categories',
+    component: () => import('../views/CategoriesView.vue')
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'errorPage',
+    component: () => import('../components/errorPage/ErrorPage.vue')
   }
 ]
 
@@ -24,6 +37,18 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+router.beforeEach((to, from, next) => {
+  const appTitle = process.env.VUE_APP_TITLE || ''
+
+  let documentTitle = `${appTitle} | ${to.name}`
+
+  if (to.params.pageTitle) {
+    documentTitle += ` | ${to.params.pageTitle}`
+  }
+
+  document.title = documentTitle
+  next()
 })
 
 export default router

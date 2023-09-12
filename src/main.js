@@ -1,7 +1,12 @@
+
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import 'bootstrap/dist/css/bootstrap.css' // Impor file CSS Bootstrap
+import 'bootstrap/dist/js/bootstrap.js'
+import './scss/main.scss'
+// Pastikan file SCSS diimpor setelah Bootstrap
 
 Vue.config.productionTip = false
 
