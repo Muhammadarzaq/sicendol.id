@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
+import ProdukView from '../views/ProdukView.vue'
 import CarInfo from '../components/cars/CarInfo.vue'
+import BerandaView from '../views/BerandaView.vue'
+import PrivacyView from '../views/PrivacyView.vue'
 
 Vue.use(VueRouter)
 
@@ -13,24 +15,24 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'About',
-    component: AboutView
-  },
-  {
     path: '/cars/:carName/:carField',
     name: 'carInfo',
     component: CarInfo
   },
   {
-    path: '/contact',
-    name: 'Contact',
-    component: () => import('../views/ContactView.vue')
+    path: '/beranda',
+    name: 'Beranda',
+    component: BerandaView
   },
   {
-    path: '/categories',
-    name: 'Categories',
-    component: () => import('../views/CategoriesView.vue')
+    path: '/produk',
+    name: 'Produk',
+    component: ProdukView
+  },
+  {
+    path: '/kebijakan-privasi',
+    name: 'Privacy',
+    component: PrivacyView
   },
   {
     path: '/:catchAll(.*)',
@@ -47,7 +49,7 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   const appTitle = process.env.VUE_APP_TITLE || ''
 
-  let documentTitle = `${appTitle} | ${to.name}`
+  let documentTitle = `${appTitle}`
 
   if (to.params.pageTitle) {
     documentTitle += ` | ${to.params.pageTitle}`

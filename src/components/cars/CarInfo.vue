@@ -9,23 +9,23 @@
       </div>
       <div class="d-flex justify-content-center">
         <img
-          v-for="(eachCarImage, x) in getCarInfo.images"
-          :src="getImageUrl(getCarInfo.name, eachCarImage)"
+          v-for="(eachCarImage, x) in getCarInfoComputed.images"
           :key="x"
-          @click="updateMainImage(eachCarImage)"
+          :src="getImageUrl(getCarInfoComputed.name, eachCarImage)"
           alt=""
           class="rounded mx-2 thumbnailImage"
+          @click="updateMainImage(eachCarImage)"
         >
       </div>
     </div>
     <div class="col-4">
       <div class="card shadow">
         <div class="card-body">
-          <h2 class="card-title text-primary">{{ getCarInfo.name }} | {{ getCarInfo.model }}</h2>
-          <p class="card-text">Year: {{ getCarInfo.year }}</p>
-          <p class="card-text">File Number: {{ getCarInfo.fileNumber }}</p>
-          <p class="card-text">{{ getCarInfo.description }}</p>
-          <p class="card-text">Uploaded On: {{ getCarInfo.uploadedOn }}</p>
+          <h2 class="card-title text-primary">{{ getCarInfoComputed.name }} | {{ getCarInfoComputed.model }}</h2>
+          <p class="card-text">Year: {{ getCarInfoComputed.year }}</p>
+          <p class="card-text">File Number: {{ getCarInfoComputed.fileNumber }}</p>
+          <p class="card-text">{{ getCarInfoComputed.description }}</p>
+          <p class="card-text">Uploaded On: {{ getCarInfoComputed.uploadedOn }}</p>
         </div>
       </div>
     </div>
@@ -41,33 +41,43 @@ export default {
   data () {
     return {
       myCarDetails: getCarInfo,
-      carName: this.$route.params.carName,
-      carField: this.$route.params.carField,
+      carName: null,
+      carField: null,
       mainImageUrl: ''
-    // ref
+      // ref
     }
   },
   methods: {
     getImageUrl (folderName, imageName) {
+      if (imageName === 0) {
+        this.$router.push({ name: 'Home' })
+      }
       const image = require.context('@/assets')
       return image('./' + folderName + '/' + imageName)
     },
     updateMainImage (eachCarImage) {
-      if (this.getCarInfo.images.includes(eachCarImage)) {
-        this.mainImageUrl = this.getImageUrl(this.getCarInfo.name, eachCarImage)
+      if (this.getCarInfoComputed.images.includes(eachCarImage)) {
+        this.mainImageUrl = this.getImageUrl(this.getCarInfoComputed.name, eachCarImage)
       } else {
         console.error('gambar tidak dapat muncul.')
       }
     }
   },
   computed: {
-    getCarInfo () {
-      const carData = this.myCarDetails.find(car => car.fileNumber === this.carField)
+    getCarInfoComputed () {
+      const carData = this.myCarDetails.find(car => car.fileNumber === parseInt(this.carField))
       return carData || {}
     }
   },
+  mounted () {
+    this.carName = this.$route.params.carName
+    this.carField = this.$route.params.carField
+    this.mainImageUrl = this.getImageUrl(this.carName, (this.getCarInfoComputed.mainImage || 0))
+    if (!this.mainImageUrl) {
+      this.$router.push({ name: 'Home' })
+    }
+  },
   created () {
-    this.mainImageUrl = this.getImageUrl(this.getCarInfo.name, this.getCarInfo.mainImage)
   }
 }
 </script>
